@@ -20,7 +20,7 @@ function newgame(){
 	});
 }
 
-$(document).ready(function(){
+function resetgame(){
 	var players = ['player1','player2','player3','player4'];
 	for(var i in players){
 		$('#'+players[i]).html('<img class="card" src="./img/___.png" />');
@@ -29,5 +29,7 @@ $(document).ready(function(){
 		for(var j=0;j<12;j++){
 			$('#'+players[i]).append('<img class="card stacked" src="./img/___.png" />');
 		}
-	}	
-});
+	}		
+}
+
+$(document).ready(resetgame);
