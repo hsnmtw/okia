@@ -3,8 +3,8 @@
 session_start();
 
 
-$numbers = array('00','01','02','03','04','05','06','07','08','09','10','11','12');
-$colours = array('b','r','g','y');
+$numbers = array('00','01','02','03','04','05','06','07','08','09','10','11','12'); shuffle($numbers);
+$colours = array('b','r','g','y'); shuffle($colours);
 
 $cards = array('zzz');		//initialize the cards with +4
 
@@ -17,6 +17,7 @@ foreach($colours as $colour){
 $cards   = array_diff($cards, array('y00')); //remove y00
 
 shuffle($cards);	//shuffle the cards
+shuffle($cards);
 
 $players = array('player1','player2','player3','player4');
 
