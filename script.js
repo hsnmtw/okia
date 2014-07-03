@@ -33,3 +33,4 @@ function resetgame(){
 }
 
 $(document).ready(resetgame);
+$('input:button').button();

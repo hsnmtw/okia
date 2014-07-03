@@ -12,7 +12,7 @@ create table player(
 );
 
 create table challenge(
-     id            varchar(32)    not null primary key,
+     id            bigint         not null primary key,
      player1       varchar(20)    not null,
      player2       varchar(20)    not null,
      player3       varchar(20)    not null,
@@ -21,8 +21,9 @@ create table challenge(
 
 
 create table game(
-     id            varchar(32)    not null primary key,
-     challenge_id  varchar(32)    not null ,
+     id            smallint       not null primary key,
+     challenge_id  bigint         not null ,
+     colour        enum('r','b','y','g') not null default 'r',
      team1_req     smallint       not null default 0,
      team2_req     smallint       not null default 0,
      team1_got     smallint       not null default 0,
@@ -31,8 +32,9 @@ create table game(
 );
 
 create table game_state(
-     state_id    timestamp        not null primary key,
-     game_id     varchar(32)      not null,
-     state       varchar(500)     not null 
+     challenge_id  bigint         not null,
+     game_id       smallint       not null,
+     state         varchar(500)   not null,
+     primary key(challenge_id,game_id)
 );
      

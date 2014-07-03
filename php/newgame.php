@@ -21,18 +21,19 @@ shuffle($cards);	//shuffle the cards
 $players = array('player1','player2','player3','player4');
 
 $game = array(
-	$players[0] => array_slice($cards,0,13),
-	$players[1] => array_slice($cards,13,13),
-	$players[2] => array_slice($cards,26,13),
-	$players[3] => array_slice($cards,39,13),
+	$players[0] => array_slice($cards,0*13,13),
+	$players[1] => array_slice($cards,1*13,13),
+	$players[2] => array_slice($cards,2*13,13),
+	$players[3] => array_slice($cards,3*13,13),
 	'colour'    => '',
-	'order'     => 5,
-	'team1'     => 0,
-	'team2'     => 0
+	'team1_req' => 0,
+	'team2_req' => 0,
+	'team1_got' => 0,
+	'team2_got' => 0
 );
 
 foreach($players as $player){
-	rsort($game[$player]);
+	rsort($game[$player]);     //sort cards by color in descending order
 }
 
 $_SESSION['game'] = $game;
