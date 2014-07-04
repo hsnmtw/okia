@@ -1,0 +1,17 @@
+<fieldset>
+	<legend><span class="glyphicon glyphicon-user"></span> New player account</legend>
+	<form action="login.php" method="post" role="form">
+		<table>
+			<tr><td width="100px">Player id</td><td><input id="player_id" class="form-control" /></td><td>&nbsp;<span id='player_id_ver'>*</span></td></tr>
+			<tr><td >Password</td><td><input id="pswd1" class="form-control" type="password" /></td><td>&nbsp;<span id='pswd1_ver'>*</span></td></tr>
+			<tr><td >Confirm</td><td><input id="pswd2" class="form-control" type="password" /></td><td>&nbsp;<span id='pswd2_ver'>*</span></td></tr>			
+			<tr><td width="100px">Name</td><td><input id="player_name" class="form-control" /></td><td>&nbsp;<span id='player_name_ver'>*</span></td></tr>
+			<tr><td width="100px">Email</td><td><input id="player_email" class="form-control" /></td><td>&nbsp;<span id='player_email_ver'>*</span></td></tr>
+			<tr><td ></td><td>
+				<input type="button" class="btn btn-primary" value="Sign up" />
+				<input type="button" class="btn" value="Cancel" onclick="show_login()" />
+				</td></tr>			
+		</table>
+		
+	</form>
+</fieldset>

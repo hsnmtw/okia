@@ -1,0 +1,14 @@
+<fieldset>
+	<legend><span class="glyphicon glyphicon-lock"></span> Please log in</legend>
+	<form action="login.php" method="post" role="form">
+		<table>
+			<tr><td width="100px">Player id</td><td><input id="player_id" class="form-control" /></td><td>&nbsp;<label><input type="checkbox" id="rem" value="rem" /> Remember me</label></td></tr>
+			<tr><td >Password</td><td><input id="pswd" class="form-control" type="password" /></td><td>&nbsp;<input type="button" class="btn btn-primary" value="Log In" /></td></tr>
+		</table>
+		<hr />
+		<p>If you are a new player, you need to <a href="javascript:void(create_account())">create an account</a> first.
+		</p>
+		<p>You can <a href="javascript:void(forgot_pswd())">retrieve forgotten player id or password</a> if you find difficulties in logging in the game centre.
+		</p>
+	</form>
+</fieldset>

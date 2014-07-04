@@ -20,3 +20,7 @@ table.board td {text-align:center;}
 
 .card {margin:0.1em; width:70px;}
 .stacked {margin-left:-4em;}
+
+form input {margin:.1em; margin-bottom:0.5em !important;}
+
+label {font-weight: normal !important;}

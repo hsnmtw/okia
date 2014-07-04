@@ -32,5 +32,23 @@ function resetgame(){
 	}		
 }
 
-$(document).ready(resetgame);
-$('input:button').button();
+function create_account(){
+	$('#main').load('html/newplayer.html?_='+_t());
+}
+
+function forgot_pswd(){
+	$('#main').load('html/forgot_pswd.html?_='+_t());	
+}
+
+function show_login(){
+	$('#main').load('html/login.html?_='+_t());
+}
+
+function _t(){
+	return (new Date()).getTime();
+}
+
+$(document).ready(function(){
+	//resetgame();
+	show_login();
+});

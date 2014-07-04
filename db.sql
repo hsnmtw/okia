@@ -7,6 +7,7 @@ create table player(
      id            varchar(20)    not null primary key,
      pswd          varchar(32)    not null,
      name          varchar(50)    not null,
+	 email         varchar(100)   not null unique,
      is_online     enum('0','1')  not null default '0',
      lastlogin     datetime
 );
