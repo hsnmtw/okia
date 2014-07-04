@@ -33,9 +33,9 @@ $game = array(
 	'team2_got' => 0
 );
 
-foreach($players as $player){
-	rsort($game[$player]);     //sort cards by color in descending order
-}
+//foreach($players as $player){
+//	rsort($game[$player]);     //sort cards by color in descending order
+	//}
 
 $_SESSION['game'] = $game;
 print(json_encode($_SESSION['game']['player1']));

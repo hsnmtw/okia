@@ -49,6 +49,10 @@ function _t(){
 }
 
 $(document).ready(function(){
-	//resetgame();
-	show_login();
+	$.get('html/game.html',function(r){
+		$("#main").html(r);
+		resetgame();
+		newgame();
+	});
+	//show_login();
 });

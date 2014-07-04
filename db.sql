@@ -14,7 +14,7 @@ create table player(
      lastlogin     datetime
 );
 
-create table challenge(
+create table room(
      id            bigint         not null primary key,
      player1       varchar(20)    not null,
      player2       varchar(20)    not null,
@@ -25,7 +25,7 @@ create table challenge(
 
 create table game(
      id            smallint       not null primary key,
-     challenge_id  bigint         not null ,
+     room_id  bigint         not null ,
      colour        enum('r','b','y','g') not null default 'r',
      team1_req     smallint       not null default 0,
      team2_req     smallint       not null default 0,
@@ -35,9 +35,11 @@ create table game(
 );
 
 create table game_state(
-     challenge_id  bigint         not null,
+     room_id  	   bigint         not null,
      game_id       smallint       not null,
+	 ser_num       smallint       not null auto increment primary key,
      state         varchar(500)   not null,
-     primary key(challenge_id,game_id)
+     primary key(room_id,game_id),
+	 
 );
      
