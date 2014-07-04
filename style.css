@@ -24,3 +24,8 @@ table.board td {text-align:center;}
 form input {margin:.1em; margin-bottom:0.5em !important;}
 
 label {font-weight: normal !important;}
+
+.navbar-header{
+  margin-left:5px;
+  width:100%;
+}

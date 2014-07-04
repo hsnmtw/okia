@@ -10,18 +10,20 @@
 <div class="container-fluid">
 <div class="navbar-header">	
 <a href="#">
-<h3>
+<div class="navbar-brand">
 <img src="img/___.png" height="50px" />
 Okia
-</h3>
+</div>
 </a>
 </div>
+<div id="player" class="pull-right"><i class="glyphicon glyphicon-user"></i> guest</div>
 <!--
 <input type="button" onclick="resetgame()" value="reset game" />
 <input type="button" onclick="newgame()" value="new game" />
 <input type="button" onclick="newplayer()" value="new player" />
 <hr />
 -->
+
 </div>
 </nav>
 <div class="container">
