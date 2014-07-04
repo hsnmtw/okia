@@ -3,6 +3,8 @@ create database okia;
 
 use okia;
 
+
+
 create table player(
      id            varchar(20)    not null primary key,
      pswd          varchar(32)    not null,
